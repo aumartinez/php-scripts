@@ -18,7 +18,7 @@ class Form {
     for ($i = 0; $i < sizeof($this->fields); $i++) {
       echo "<p>\n";
       echo "<label>{$this->fields[$i]["label"]}</label><br />\n";
-      echo "<input type=\"text\" name=\"{$this->fields[$i]["name"]}\"></input>\n";
+      echo "<input type=\"text\" name=\"{$this->fields[$i]["name"]}\" />\n";
       echo "</p>\n";
     }
     
