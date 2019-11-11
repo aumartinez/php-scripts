@@ -5,7 +5,7 @@ SET TIME_ZONE = "+00:00";
 
 -- Create table
 
-CREATE TABLE IT NOT EXISTS `siteStatus` (
+CREATE TABLE IF NOT EXISTS siteStatus (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   siteUrl VARCHAR(255),
   siteStatus VARCHAR(10)
@@ -14,7 +14,7 @@ CREATE TABLE IT NOT EXISTS `siteStatus` (
 
 -- Fill in example
 
-INSERT INTO `siteStatus` (
+INSERT INTO siteStatus (
   siteUrl,
   siteStatus
 ) 
