@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!doctype html>
 <html>
   <head>
@@ -36,13 +39,6 @@
               <div id="nameError" class="errorMess">
                 <span>Name is required</span>
               </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="city">
-                City:
-              </label>
-              <input id="city" name="city" type="text" />              
             </div>
             
             <div class="form-group">
