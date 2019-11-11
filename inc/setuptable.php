@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $db = "database";
-$dbUser = "admin"
+$dbUser = "admin";
 $dbPass = "password";
 
 $file = 'sql/sitestable.sql';
