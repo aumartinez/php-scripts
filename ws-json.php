@@ -21,7 +21,7 @@ $conx = mysqli_connect($host, $dbUser, $dbPass, $db);
 
 if (!$conx) {
   $result = array("siteStatus" => "Database Error");
-  echo json_encode($row);
+  echo json_encode($result);
 }
 else {
   $site = mysqli_real_escape_string($conx, $site);
