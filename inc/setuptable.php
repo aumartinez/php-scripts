@@ -20,7 +20,6 @@ if (!$query) {
   die("Error :" . mysqli_errno($conx));
 }
 
-mysqli_free_result($query);
 mysqli_close($conx);
 
 ?>
