@@ -1,18 +1,19 @@
-<?
+<?php
   class Form {
     private $fields = array();
     private $actionValue;
     private $submit = "Submit";
     private $formFields = 0;
     
-    function __construct($actionValue, $submit) {
+    function __construct($actionValue, $submit, $method) {
       $this->actionValue = $actionValue;
       $this->submit = $submit;
+      $this->method = $method;
     }
     
     function buildForm() {
       echo "\n";
-      echo "<form action=\"{$this->actionValue}\" method=\"post\">\n";
+      echo "<form action=\"{$this->actionValue}\" method=\"{$this->method}\">\n";
       
       for ($i = 0; $i < sizeof($this->fields); $i++) {
         echo "<p>\n";
