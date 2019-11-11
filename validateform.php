@@ -138,7 +138,7 @@
             </div>
             
             <div class="form-group">
-              <button id="submitform" name="submitform" type="submit">
+              <button id="submitForm" name="submitForm" type="submit">
                 Submit
               </button>
             </div>
