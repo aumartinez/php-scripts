@@ -1,1 +1,106 @@
 /* Form CSS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 600px;
+  padding: 60px 15px;
+  margin: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+form fieldset {
+  border: 1px solid #ccc;
+  background-color: #e7e7e7;
+  padding: 15px;
+  margin: 0;
+}
+
+form fieldset legend {
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 24px;
+}
+
+.errorMess {
+  color: red;
+  clear: both;
+}
+
+.form-group {
+  padding: 5px 0;
+  float: none;
+  clear: both;
+}
+
+.form-group input,
+.form-group label{
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.form-group select {
+  border-radius: 5px;
+  border: 1px solid #ccc;  
+}
+
+.form-group select>option,
+.form-group select {
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+}
+
+.form-group select>option {
+  font-size: 20px;
+  line-height: 20px;  
+}
+
+.form-group input[type="password"],
+.form-group input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.form-group div>label.radio-lbl,
+.form-group div>input.radio-btn {
+  display: block;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+}
+
+.form-group div>input.radio-btn {
+  width: 20px;
+}
+
+.form-group .radio-group {
+  clear: both;
+  float: none;
+}
+
+form button {
+  width: 100%;
+  height: 45px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #72bbd3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
