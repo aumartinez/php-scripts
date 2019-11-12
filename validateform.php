@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
 ?>
 <!doctype html>
 <html>
@@ -31,13 +31,25 @@
               User Information
             </legend>
             <div id="errorDiv">
+              <?php
+                if (isset($_SESSION["error"]) && isset($_SESSION["form"])) {
+                  unset($_SESSION["form"]);
+                  echo "\n";
+                  echo "Errors Found <br />\n";
+                  
+                  foreach ($_SESSION["error"] as $error) {
+                    echo $error;
+                    echo "<br />\n";
+                  }
+                }
+              ?>
             </div>
             
             <div class="form-group">
               <label for="name">
                 Name: <span>*</span>
               </label>
-              <input id="name" name="name" type="text" required />
+              <input id="name" name="name" type="text" />
               <div id="nameError" class="errorMess">
                 <span>Name is required</span>
               </div>
@@ -78,7 +90,7 @@
               <label for="email">
                 E-mail address: <span>*</span>
               </label>
-              <input id="email" name="email" type="text" required />
+              <input id="email" name="email" type="text" />
               <div id="emailError" class="errorMess">
                 <span>E-mail is required</span>
               </div>
@@ -99,7 +111,7 @@
                 Number type:
               </label>
               <div class="radio-group">
-                <input id="work" name="phonetype" value="work" type="radio" class="radio-btn" required />
+                <input id="work" name="phonetype" value="work" type="radio" class="radio-btn" />
                 <label class="radio-lbl" for="work">
                   Work
                 </label>
@@ -119,8 +131,8 @@
               <label for="password">
                 Password: <span>*</span>
               </label>
-              <input id="password" name="password" type="password" required />
-              <div id="passError" class="errorMess">
+              <input id="password" name="password" type="password" />
+              <div id="passwordError" class="errorMess">
                 <span>Password is required</span>
               </div>
             </div>
@@ -129,7 +141,7 @@
               <label for="verify">
                 Verify password: <span>*</span>
               </label>
-              <input id="verify" name="verify" type="password" required />
+              <input id="verify" name="verify" type="password" />
               <div id="verifyError" class="errorMess">
                 <span>Passwords don't match</span>
               </div>
