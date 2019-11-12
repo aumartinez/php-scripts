@@ -11,7 +11,9 @@
     <title>Form Validation</title>
     
     <link rel="stylesheet" type="text/css" href="css/form.css" />
+    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
   </head>
   
   <body>
@@ -73,7 +75,7 @@
             </div>
             
             <div class="form-group">
-              <label for="emai">
+              <label for="email">
                 E-mail address: <span>*</span>
               </label>
               <input id="email" name="email" type="text" />
@@ -96,13 +98,13 @@
               <label>
                 Number type:
               </label>
-              <div>
+              <div class="radio-group">
                 <input id="work" name="phonetype" value="work" type="radio" class="radio-btn" />
                 <label class="radio-lbl" for="work">
                   Work
                 </label>
               </div>
-              <div>
+              <div class="radio-group">
                 <input id="home" name="phonetype" value="home" type="radio" class="radio-btn"/>
                 <label class="radio-lbl" for="home">
                   Home
