@@ -50,9 +50,9 @@ $(document).ready(function(){
   
   function displayErrors(errors) {    
     for (let i = 0, len = errors.length; i < len; i++) {      
-      $("#" + errors[i] + "Error").addClass("active");
-      $("#errorDiv").html("Errors found");
+      $("#" + errors[i] + "Error").addClass("active");      
     }
+    $("#errorDiv").html("Errors found");
   }
   
   function removeErrors() {
