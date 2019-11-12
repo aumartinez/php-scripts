@@ -104,3 +104,7 @@ form button {
   border-radius: 5px;
   color: #fff;
 }
+
+form button:hover {
+  opacity: 0.8;
+}
