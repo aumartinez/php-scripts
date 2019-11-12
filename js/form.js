@@ -10,27 +10,45 @@ $(document).ready(function(){
       return true;
     }
     else {
+      removeErrors();
+      displayErrors(errors);
       evt.preventDefault();
       return false;
     }
     
   });
   
+  
   function validateForm() {
-    let errorFields = [];
+    let errors = [];
     
     if ($("#name").val() == "") {
-      errorFields.push("name");
+      errors.push("name");
     }
     
     if ($("#email").val() == "") {
-      errorFields.push("email");
+      errors.push("email");
     }
     
     if ($("#password").val() == "") {
-      errorFields.push("password");
+      errors.push("password");
     }
     
-    return errorFields;
+    if ($("#verify").val() == "") {
+      errors.push("verify");
+    }
+    
+    return errors;
+  }//End validateForm()
+  
+  function displayErrors(errors) {    
+    for (let i = 0, len = errors.length; i < len; i++) {      
+      $("#" + errors[i] + "Error").addClass("active");
+      $("#errorDiv").html("Errors found");
+    }
+  }
+  
+  function removeErrors() {
+    $(".errorMess.active").removeClass("active");
   }
 });
