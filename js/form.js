@@ -22,6 +22,7 @@ $(document).ready(function(){
   function validateForm() {
     let errors = [];
     
+    //Empty fields validation
     if ($("#name").val() == "") {
       errors.push("name");
     }
@@ -34,8 +35,14 @@ $(document).ready(function(){
       errors.push("password");
     }
     
-    if ($("#verify").val() == "") {
+    //Password verification match
+    if ($("#password").val() != $("#verify").val()) {
       errors.push("verify");
+    }
+    
+    //Email check (basic)
+    if (!($("#email").val().indexOf(".") > 2) && ($("#email").val().indexOf("@"))) {
+      errors.push("email");
     }
     
     return errors;
