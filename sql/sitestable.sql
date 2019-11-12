@@ -17,8 +17,15 @@ CREATE TABLE IF NOT EXISTS siteStatus (
 INSERT INTO siteStatus (
   siteUrl,
   siteStatus
-) 
-VALUES (
-  "https://www.mycoolsite.org",
+)
+
+SELECT 
+  "https://www.mycoolsite.org", 
   "Up"
-);
+  
+  FROM DUAL
+
+  WHERE (
+    SELECT COUNT(*) 
+    FROM siteStatus 
+    WHERE siteUrl = "https://www.mycoolsite.org") = 0;
