@@ -32,9 +32,18 @@ form fieldset legend {
   padding-top: 24px;
 }
 
+#errorDiv {
+  color: red;
+}
+
 .errorMess {
   color: red;
   clear: both;
+  display: none;
+}
+
+.errorMess.active {
+  display: block;
 }
 
 .form-group {
