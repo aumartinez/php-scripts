@@ -37,7 +37,7 @@
               <label for="name">
                 Name: <span>*</span>
               </label>
-              <input id="name" name="name" type="text" />
+              <input id="name" name="name" type="text" required />
               <div id="nameError" class="errorMess">
                 <span>Name is required</span>
               </div>
@@ -78,7 +78,7 @@
               <label for="email">
                 E-mail address: <span>*</span>
               </label>
-              <input id="email" name="email" type="text" />
+              <input id="email" name="email" type="text" required />
               <div id="emailError" class="errorMess">
                 <span>E-mail is required</span>
               </div>
@@ -99,7 +99,7 @@
                 Number type:
               </label>
               <div class="radio-group">
-                <input id="work" name="phonetype" value="work" type="radio" class="radio-btn" />
+                <input id="work" name="phonetype" value="work" type="radio" class="radio-btn" required />
                 <label class="radio-lbl" for="work">
                   Work
                 </label>
@@ -119,7 +119,7 @@
               <label for="password">
                 Password: <span>*</span>
               </label>
-              <input id="password" name="password" type="password" />
+              <input id="password" name="password" type="password" required />
               <div id="passError" class="errorMess">
                 <span>Password is required</span>
               </div>
@@ -129,7 +129,7 @@
               <label for="verify">
                 Verify password: <span>*</span>
               </label>
-              <input id="verify" name="verify" type="password" />
+              <input id="verify" name="verify" type="password" required />
               <div id="verifyError" class="errorMess">
                 <span>Passwords don't match</span>
               </div>
