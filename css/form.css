@@ -80,6 +80,7 @@ form fieldset legend {
   border-radius: 5px;
   height: 45px;
   line-height: 45px;
+  font-size: 20px;
 }
 
 .form-group div>label.radio-lbl,
