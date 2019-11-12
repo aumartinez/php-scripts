@@ -16,8 +16,7 @@ $(document).ready(function(){
       return false;
     }
     
-  });
-  
+  });  
   
   function validateForm() {
     let errors = [];
@@ -43,6 +42,21 @@ $(document).ready(function(){
     //Email check (basic)
     if (!($("#email").val().indexOf(".") > 2) && ($("#email").val().indexOf("@"))) {
       errors.push("email");
+    }
+    
+    //Phone length check and select option if filled
+    if ($("#phone").val() != "") {
+      let phoneNumb = $("#phone").val();
+      
+      phoneNumb.replace(/[^0-9]/g, "");
+      
+      if (phoneNumb.length != 10) {
+        errors.push("phone");
+      }
+      
+      if (!$("input[name=phonetype]:checked").val()) {
+        errors.push("phonetype");
+      }
     }
     
     return errors;
