@@ -18,13 +18,10 @@ INSERT INTO siteStatus (
   siteUrl,
   siteStatus
 )
-
 SELECT 
   "https://www.mycoolsite.org", 
-  "Up"
-  
+  "Up"  
   FROM DUAL
-
   WHERE (
     SELECT COUNT(*) 
     FROM siteStatus 
