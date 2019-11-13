@@ -32,8 +32,7 @@ foreach ($required as $value) {
 
 //Final check
 if (count($_SESSION["error"]) > 0 ) {  
-  header("Location: validateform.php");
-  echo "here";
+  header("Location: validateform.php");  
   exit();
 }
 else {
